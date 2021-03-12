@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                min-width: 370px;
+                max-width: 792px;
+                
+                min-height: 78px;
+                max-height: 500px;
+                
+                font-family: "Segoe UI", Tahoma, sans-serif;
+            }
+            #inputBox {
+                width:     300px;
+                min-width: 300px;
+                max-width: 714px;
+                
+                height:     75px;
+                min-height: 15px;
+                max-height: 529px;
+            }
+            .codeButton {
+                text-shadow: 0px 0px 4px #000000;
+                box-shadow: 0px 0px 4px #000000;
+                background-color: #101010;
+                color: white;
+
+                outline: none;
+                text-decoration: none;
+                border: none;
+                display: inline-block;
+                border-radius: 12px;
+            }
+            .codeButton:hover {
+                transition: 0.1s;
+                background-color: #202020;
+            }
+            .codeButton:active {
+                transition: 0s;
+                background-color: #000000;
+            }
+            #extensionName {
+                color: #636363;
+            }
+            #optionsButton {
+                float: right;
+                padding-right: 5px;
+            }
+            a {
+                color: #4285F4;
+                text-decoration: none;
+                padding: 0;
+                margin-right: 5px;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #F0F0F0;
+                padding-right:  5px;
+                padding-top:    5px;
+                padding-bottom: 5px;
+                padding-left:   5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ioSpace">
+            <table id="inputTable">
+                <tr><td rowspan="2"><textarea id="inputBox"></textarea></td> <td><input type="button" class="codeButton" value="Encode" id="encodeButton" /></td></tr>
+                <tr>                                                         <td><input type="button" class="codeButton" value="Decode" id="decodeButton" /></td></tr>
+            </table>
+        </div>
+        <br />
+        <br />
+        <div class="footer">
+            <span id="extensionName">Base64 Codec</span>
+            <a href="#" id="optionsButton">Extension Options</a>
+        </div>
+
+        <script src="thirdParty/css.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
